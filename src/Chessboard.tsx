@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { type ReactElement } from 'react';
+import invariant from 'tiny-invariant';
+import { draggable } from '@atlaskit/pragmatic-drag-and-drop/element/adapter';
 
 // eslint-disable-next-line @atlaskit/ui-styling-standard/use-compiled -- Ignored via go/DSP-18766
 /** @jsxImportSource @emotion/react */
