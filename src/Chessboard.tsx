@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { type ReactElement } from 'react';
 
 // eslint-disable-next-line @atlaskit/ui-styling-standard/use-compiled -- Ignored via go/DSP-18766
