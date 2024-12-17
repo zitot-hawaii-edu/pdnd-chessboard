@@ -64,8 +64,20 @@ function Chessboard() {
 
 	return <div css={chessboardStyles}>{renderSquares(pieces)}</div>;
 }
+
 function Piece({ image, alt }: PieceProps) {
-	return <img css={imageStyles} src={image} alt={alt} draggable="false" />; // draggable set to false to prevent dragging of the images
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const el = ref.current;
+        invariant(el);
+
+        return draggable({
+            element: el,
+        });
+    }, []);
+
+    return <img css={imageStyles} src={image} alt={alt} ref={ref} />;
 }
 
 export function King() {
